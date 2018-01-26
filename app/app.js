@@ -90,13 +90,7 @@ myResumeApplication.controller('ContactController',['$scope','$http','$location'
         email : '',
         message : ''
     }
-    $scope.contactMe = () => {
-        const contactNew = {
-            name : $scope.contact.name,
-            email : $scope.contact.email,
-            message : $scope.contact.message
-        }
-        $location.path('thanks');
-    }
+    $scope.contactMe = () =>  $location.path('thanks');
+    
 }]);
 
