@@ -1,0 +1,28 @@
+ <!--About-->
+ <section id="aboutUs" class="secPad">
+        <div class="container">
+            <div class="heading text-center">
+                <!-- Heading -->
+                <h2>{{intro}}</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </div>
+            <div class="row">
+                <!-- item -->
+                <div class="col-md-3 text-center tileBox" ng-repeat="about in abouts">
+                   <div class="txtHead"> <i class="fa fa-desktop"></i>
+                    <h3>{{about.key}}<span class="id-color"> {{about.key2}}</span></h3></div>
+                    <p>{{about.line}}</p>
+                </div>
+                <!-- end: -->
+            </div>
+        </div>
+    </section>
+    <!--Quote-->
+    <section id="quote" class="bg-parlex">
+        <div class="parlex-back">
+            <div class="container secPad text-center">
+				<h2>{{quote}}</h2><h3>{{quotedBy}}</h3>
+            </div>
+            <!--/.container-->
+        </div>
+    </section>

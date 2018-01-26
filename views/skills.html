@@ -1,0 +1,44 @@
+ <!--Skills-->
+ <section id="skills" class="secPad white">
+    	<div class="container">
+        <div class="heading text-center">
+                <!-- Heading -->
+                <h2>My Skills</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+            </div>
+        	<div class="row">
+                <div class="col-sm-6">
+                    <h2>Programming <strong>Skills</strong></h2>
+                    <p class="mrgBtm20">
+                        Learning never stops
+                    </p>
+                    <div class="row" ng-repeat="skill in skills">
+                        <div class="col-md-2 skilltitle">{{skill.skillName}}</div>
+                        <div class="col-md-8">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="{{skill.skillProportion}}" aria-valuemin="0" aria-valuemax="100" style="{{skill.style}}">
+                                    <span class="sr-only">{{skill.skillProportion}}Complete</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <h2>Additional Tools and Languages <strong>Skills</strong></h2>
+                    <p class="mrgBtm20">
+                        Fall in Love with Coding.
+                    </p>
+                    <div class="row" ng-repeat="addon in addons">
+                        <div class="col-md-2 skilltitle">{{addon.addonname}}</div>
+                        <div class="col-md-8">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" style="{{addon.style}}">
+                                    <span class="sr-only">{{addon.addonname}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </section>

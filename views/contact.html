@@ -1,0 +1,55 @@
+<!-- 
+There are probably many improvements that could be made,
+but it's a start on the frontend at least.
+-->
+<div class="container" style="text-align:center;">
+        <div class="row">
+                <h1>Feel Free To Contact Me</h1>
+        </div>
+        <div class="row">
+                <h4 style="text-align:center">We'd love to hear from you!</h4>
+        </div>
+            <form name="contactForm" ng-submit="contactMe()">
+                    <div class="row input-container">
+                            <div class="col-xs-12">
+                                <div class="styled-input wide">
+                                    <input type="text" name="name" placeholder="Enter the name" ng-model="contact.name" ng-required="true"/>
+                                    <div ng-show="contactForm.name.$touched && contactForm.name.$invaid">
+                                            <small style="color:red;display:block;text-align:center;">Enter a valid name</small>
+                                    </div>
+                                    <label>Name</label> 
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="styled-input">
+                                    <input type="text" name="email" placeholder="Enter the email" ng-model="contact.email" ng-required="true"/>
+                                    <div ng-show="contactForm.email.$touched && contactForm.email.$invalid">
+                                            <small style="color:red;display:block;text-align:center;">Enter a valid email</small>
+                                    </div>
+                                    <label>Email</label> 
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="styled-input" style="float:right;">
+                                    <input type="number" name="phoneno" placeholder="Enter the phone number" ng-model="contact.phone" ng-required="true" />
+                                    <div ng-show="contactForm.phoneno.$touched && contactForm.phoneno.$invalid">
+                                            <small style="color:red;display:block;text-align:center;">Enter a valid phone number</small>
+                                    </div>
+                                    <label>Phone Number</label> 
+                                </div>
+                            </div>
+                            <div class="col-xs-12">
+                                <div class="styled-input wide">
+                                    <textarea ng-model="contact.message" ng-required="true"></textarea>
+                                    <label>Message</label>
+                                </div>
+                            </div>
+                            <button ng-disabled="contactForm.$invalid">
+                                <div class="btn-lrg submit-btn">Send Message</div>
+                            </button>
+            </form>
+        </div>
+    </div>
+    
+ 
+
