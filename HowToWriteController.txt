@@ -1,0 +1,29 @@
+To write a controller, 
+
+in app.js simply write
+    var app = angular.module('application-name',[any dependencies goes in square braces]);
+
+set constants for json files
+app.constant('url goes here')
+
+for the factory
+
+app.factory('JSONFactory', function($http ,$q){
+  var obj = { 
+    getJSON : url => { $http.get(url).then(data => defer.resolve(data)).catch(err => defer.reject(err))};
+    return defer.promise;
+  }
+  
+  return obj;
+ 
+});
+
+
+for the controller
+
+app.controller('controller-name',($scope,factory-name,url for resource) => {
+  
+    var promise = factory-name.getJSON(url for resource);
+    promise.then(data => $scope.appVariable = data).catch(err => console.log(err);
+
+});
